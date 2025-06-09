@@ -211,8 +211,7 @@ class _PrimaryPageState extends State<PrimaryPage> {
                             height: itemHeight,
                             alignment: Alignment.center,
                             child: Text(
-                              DateFormat(DateFormat.ABBR_WEEKDAY)
-                                  .format(dateTime),
+                              DateFormat('EEE', 'es_ES').format(dateTime),
                               style: TextStyle(
                                   fontSize:
                                       theme.textTheme.bodyMedium!.fontSize!,

@@ -223,7 +223,7 @@ class _DateRangerState extends State<DateRanger>
                     minWidth: width*/
                 ),
                 width: width,
-                margin: EdgeInsets.only(bottom: 26),
+                margin: EdgeInsets.only(bottom: 10),
                 padding: EdgeInsets.symmetric(
                         horizontal: widget.horizontalPadding,
                         vertical: widget.verticalPadding)
