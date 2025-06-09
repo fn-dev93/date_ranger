@@ -211,23 +211,6 @@ class _DateRangerState extends State<DateRanger>
               ],
             ),
           ),
-          ValueListenableBuilder<bool>(
-            valueListenable: showInfo,
-            builder: (context, value, child) => AnimatedOpacity(
-                duration: Duration(seconds: 2),
-                opacity: value ? 1 : 0,
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 6, horizontal: 4),
-                  child: Text(
-                    "Double tap to find date",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Theme.of(context).colorScheme.primary,
-                        fontSize: 12),
-                  ),
-                )),
-          ),
           LayoutBuilder(
             builder: (context, constraints) {
               var sevenDaysWidth =
@@ -235,9 +218,10 @@ class _DateRangerState extends State<DateRanger>
               var width = widget.showWeekDay ? sevenDaysWidth : double.infinity;
               return Container(
                 constraints: BoxConstraints(
-                    maxHeight: calculateHeight(constraints),
-                    /*maxWidth: width,
-                    minWidth: width*/),
+                  maxHeight: calculateHeight(constraints),
+                  /*maxWidth: width,
+                    minWidth: width*/
+                ),
                 width: width,
                 margin: EdgeInsets.only(bottom: 26),
                 padding: EdgeInsets.symmetric(
@@ -386,7 +370,7 @@ class _DateRangerState extends State<DateRanger>
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    isRange ? "${start ? "Start" : "End"} date" : "Date",
+                    isRange ? "${start ? "Desde" : "Hasta"}" : "Fecha",
                     maxLines: 1,
                     style: TextStyle(
                         color: Theme.of(context)

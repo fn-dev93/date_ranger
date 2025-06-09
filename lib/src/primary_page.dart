@@ -214,7 +214,8 @@ class _PrimaryPageState extends State<PrimaryPage> {
                               DateFormat(DateFormat.ABBR_WEEKDAY)
                                   .format(dateTime),
                               style: TextStyle(
-                                  fontSize: theme.textTheme.bodyMedium!.fontSize!,
+                                  fontSize:
+                                      theme.textTheme.bodyMedium!.fontSize!,
                                   color: outOfRangeTextColor),
                             ),
                           ),
@@ -230,8 +231,8 @@ class _PrimaryPageState extends State<PrimaryPage> {
                                 isRange;
                             if (startIsAfterEnd || endISBeforeStart) {
                               widget.onError(startIsAfterEnd
-                                  ? "Start date cannot be after end date"
-                                  : "End date cannot be before start date");
+                                  ? "La fecha de inicio no puede ser posterior a la fecha de fin"
+                                  : "La fecha de fin no puede ser anterior a la fecha de inicio");
                             } else {
                               ///set the start and end to the same day if is single picker
                               var newRange = isRange
